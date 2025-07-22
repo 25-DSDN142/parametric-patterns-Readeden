@@ -1,7 +1,12 @@
 //your parameter variables go here!
-let rect_width  = 20;
-let rect_height = 30;
-
+var topY = 130 // top of tub
+var wheelX = 170 //wheel center
+var wheelY = 180 //wheel center
+var handlex = 30 //handle center
+//var handleY = 130 //handle center - I added this to (topY)
+var Btubx = 80 // left bottem of tub
+var BtubY = 170  // left bottem of tub
+// add location so I can move the wheelbarow around
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(DEVELOP_GLYPH);
@@ -17,9 +22,30 @@ function setup_wallpaper(pWallpaper) {
 }
 
 function wallpaper_background() {
-  background(240, 255, 240); //light honeydew green colour
+  background(150, 230, 255); 
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
-  rect(40 ,40, rect_width, rect_height);
+  //wheelbarrow
+  
+  
+  
+//tub
+  quad(60, topY, 165, topY, 130, 165, Btubx, BtubY)
+  
+  //wheel
+ ellipse(wheelX,wheelY,25)
+
+ strokeWeight(2)
+  //stand
+  line( Btubx, BtubY, 67, 190)
+ //handle from wheel
+  line(handlex,topY,wheelX,wheelY) 
+
+  strokeWeight(1)//back to normal
+  
+  fill(255)
+  //noStrock()
+  // new handle
+  ellipse(handlex,topY,17,7)
 }
