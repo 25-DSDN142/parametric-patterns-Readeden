@@ -10,45 +10,286 @@ Your final settings.txt will look something like this when you are finished:
 Wallpaper 1:
 
 //your parameter variables go here!
-let rect_width  = 20;
-let rect_height = 20;
-let paramter1 = 10;
-let paramter2 = true;
-let paramter3 = 50; 
-let paramter4 = 0; 
-let paramter5 = 60;
-
-function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(GRID_WALLPAPER);
-  pWallpaper.resolution(NINE_LANDSCAPE);
-  pWallpaper.show_guide(false); //set this to false when you're ready to print
-
-  //Grid settings
-  pWallpaper.grid_settings.cell_width  = 100;
-  pWallpaper.grid_settings.cell_height = 100;
-  pWallpaper.grid_settings.row_offset  = 50;
-}
+var topY = 130 // top of tub
+var wheelX = 155 //wheel center
+var wheelY = 180 //wheel center
+var handlex = 30 //handle center
+//var handleY = 130 //handle center - I added this to (topY)
+var Btubx = 80 // left bottem of tub
+var BtubY = 170  // left bottem of tub
+let wy = -0 //wheelbarrow placment
+let psize = 10 //peddle size
+let yy = 100 //yellow flower
+let xy = 120 //yellow flower
+let xb = 90 //blue flower
+let yb = 110 //blue flowwer
+let xw = 155 //gray flower
+let yw = 120 //gray flower
+let xr = 65 //red flower
+let yr = 105 //red flower
+let e = 0 //edge for wheelbarrow flowers
+let c = psize/2 //peddle cerve
+var leafw = 10 //leaf width
+var leafl = 30  //leaf lenth
+var fully = 200 //lenth of image
+var fullx = 200 //width of image
+var rfp = fully-20 // right flower(and leaf) placement
+let Wheelbarow = true 
+let plants = true 
 
 /////////////////////////////////
 
 Wallpaper 2:
 
 //your parameter variables go here!
-let rect_width  = 10;
-let rect_height = 10;
-let paramter1 = 20;
-let paramter2 = false;
-let paramter3 = 50; 
-let paramter4 = 80; 
-let paramter5 = 30;
+var topY = 140 // top of tub
+var wheelX = 165 //wheel center
+var wheelY = 190 //wheel center
+var handlex = 40 //handle center
+//var handleY = 130 //handle center - I added this to (topY)
+var Btubx = 90 // left bottem of tub
+var BtubY = 180  // left bottem of tub
+let wy = -10 //wheelbarrow placment
+let psize = 20 //peddle size
+let yy = 110 //yellow flower
+let xy = 130 //yellow flower
+let xb = 100 //blue flower
+let yb = 120 //blue flowwer
+let xw = 165 //gray flower
+let yw = 130 //gray flower
+let xr = 75 //red flower
+let yr = 115 //red flower
+let e = 10 //edge for wheelbarrow flowers
+let c = psize/2 //peddle cerve
+var leafw = 20 //leaf width
+var leafl = 40  //leaf lenth
+var fully = 210 //lenth of image
+var fullx = 210 //width of image
+var rfp = fully-30 // right flower(and leaf) placement
+let Wheelbarow = true 
+let plants = true 
 
-function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(GRID_WALLPAPER);
-  pWallpaper.resolution(NINE_LANDSCAPE);
-  pWallpaper.show_guide(false); //set this to false when you're ready to print
+/////////////////////////////////
 
-  //Grid settings
-  pWallpaper.grid_settings.cell_width  = 100;
-  pWallpaper.grid_settings.cell_height = 100;
-  pWallpaper.grid_settings.row_offset  = 0;
-}
+Wallpaper 3:
+//your parameter variables go here!
+var topY = 130 // top of tub
+var wheelX = 155 //wheel center
+var wheelY = 180 //wheel center
+var handlex = 30 //handle center
+//var handleY = 130 //handle center - I added this to (topY)
+var Btubx = 80 // left bottem of tub
+var BtubY = 170  // left bottem of tub
+let wy = -0 //wheelbarrow placment
+let psize = 100 //peddle size
+let yy = 110 //yellow flower
+let xy = 130 //yellow flower
+let xb = 100 //blue flower
+let yb = 120 //blue flowwer
+let xw = 165 //gray flower
+let yw = 130 //gray flower
+let xr = 75 //red flower
+let yr = 115 //red flower
+let e = 10 //edge for wheelbarrow flowers
+let c = psize/2 //peddle cerve
+var leafw = 20 //leaf width
+var leafl = 40  //leaf lenth
+var fully = 210 //lenth of image
+var fullx = 210 //width of image
+var rfp = fully-30 // right flower(and leaf) placement
+let Wheelbarow = false
+let plants = true 
+
+
+/////////////////////////////////
+
+Wallpaper 4:
+//your parameter variables go here!
+var topY = 130 // top of tub
+var wheelX = 155 //wheel center
+var wheelY = 180 //wheel center
+var handlex = 30 //handle center
+//var handleY = 130 //handle center - I added this to (topY)
+var Btubx = 80 // left bottem of tub
+var BtubY = 170  // left bottem of tub
+let wy = -0 //wheelbarrow placment
+let psize = 70 //peddle size
+let yy = 20 //yellow flower
+let xy = 130 //yellow flower
+let xb = 100 //blue flower
+let yb = 120 //blue flowwer
+let xw = 165 //gray flower
+let yw = 130 //gray flower
+let xr = 20 //red flower
+let yr = 20 //red flower
+let e = 10 //edge for wheelbarrow flowers
+let c = psize/2 //peddle cerve
+var leafw = 20 //leaf width
+var leafl = 40  //leaf lenth
+var fully = 210 //lenth of image
+var fullx = 210 //width of image
+var rfp = fully-30 // right flower(and leaf) placement
+let Wheelbarow = true
+let plants = true 
+
+
+
+
+/////////////////////////////////
+
+Wallpaper 5:
+//your parameter variables go here!
+var topY = 130 // top of tub
+var wheelX = 155 //wheel center
+var wheelY = 180 //wheel center
+var handlex = 30 //handle center
+//var handleY = 130 //handle center - I added this to (topY)
+var Btubx = 80 // left bottem of tub
+var BtubY = 170  // left bottem of tub
+let wy = -0 //wheelbarrow placment
+let psize = 5 //peddle size
+let yy = 100 //yellow flower
+let xy = 120 //yellow flower
+let xb = 90 //blue flower
+let yb = 110 //blue flowwer
+let xw = 165 //gray flower
+let yw = 120 //gray flower
+let xr = 65 //red flower
+let yr = 105 //red flower
+let e = 5 //edge for wheelbarrow flowers
+let c = psize/2 //peddle cerve
+var leafw = 0 //leaf width
+var leafl = 40  //leaf lenth
+var fully = 210 //lenth of image
+var fullx = 210 //width of image
+var rfp = fully-30 // right flower(and leaf) placement
+let Wheelbarow = true
+let plants = true 
+
+
+
+/////////////////////////////////
+
+Wallpaper 6:
+//your parameter variables go here!
+var topY = 130 // top of tub
+var wheelX = 155 //wheel center
+var wheelY = 180 //wheel center
+var handlex = 30 //handle center
+//var handleY = 130 //handle center - I added this to (topY)
+var Btubx = 80 // left bottem of tub
+var BtubY = 170  // left bottem of tub
+let wy = -0 //wheelbarrow placment
+let psize = 20 //peddle size
+let yy = 60 //yellow flower
+let xy = 120 //yellow flower
+let xb = 60 //blue flower
+let yb = 50 //blue flowwer
+let xw = 165 //gray flower
+let yw = 100 //gray flower
+let xr = 35 //red flower
+let yr = 100 //red flower
+let e = 5 //edge for wheelbarrow flowers
+let c = psize/2 //peddle cerve
+var leafw = 0 //leaf width
+var leafl = 40  //leaf lenth
+var fully = 210 //lenth of image
+var fullx = 210 //width of image
+var rfp = fully-30 // right flower(and leaf) placement
+let Wheelbarow = true
+let plants = false
+
+
+/////////////////////////////////
+
+Wallpaper 7:
+//your parameter variables go here!
+var topY = 130 // top of tub
+var wheelX = 155 //wheel center
+var wheelY = 180 //wheel center
+var handlex = 30 //handle center
+//var handleY = 130 //handle center - I added this to (topY)
+var Btubx = 80 // left bottem of tub
+var BtubY = 170  // left bottem of tub
+let wy = -50 //wheelbarrow placment
+let psize = 50 //peddle size
+let yy = 100 //yellow flower
+let xy = 195 //yellow flower
+let xb = 95 //blue flower
+let yb = 0 //blue flowwer
+let xw = 195 //gray flower
+let yw = 100 //gray flower
+let xr = 95 //red flower
+let yr = 100 //red flower
+let e = 0 //edge for wheelbarrow flowers
+let c = psize/50 //peddle cerve
+var leafw = 900 //leaf width
+var leafl = 10  //leaf lenth
+var fully = 200 //lenth of image
+var fullx = 200 //width of image
+var rfp = fully-30 // right flower(and leaf) placement
+let Wheelbarow = false
+let plants = true
+
+
+/////////////////////////////////
+
+Wallpaper 8:
+//your parameter variables go here!
+var topY = 130 // top of tub
+var wheelX = 155 //wheel center
+var wheelY = 180 //wheel center
+var handlex = 30 //handle center
+//var handleY = 130 //handle center - I added this to (topY)
+var Btubx = 80 // left bottem of tub
+var BtubY = 170  // left bottem of tub
+let wy = -50 //wheelbarrow placment
+let psize = 50 //peddle size
+let yy = 0 //yellow flower
+let xy = 195 //yellow flower
+let xb = 95 //blue flower
+let yb = 0 //blue flowwer
+let xw = 195 //gray flower
+let yw = 100 //gray flower
+let xr = 95 //red flower
+let yr = 100 //red flower
+let e = 0 //edge for wheelbarrow flowers
+let c = psize/2 //peddle cerve
+var leafw = 0 //leaf width
+var leafl = 10  //leaf lenth
+var fully = 200 //lenth of image
+var fullx = 200 //width of image
+var rfp = fully-30 // right flower(and leaf) placement
+let Wheelbarow = false
+let plants = true
+
+/////////////////////////////////
+
+Wallpaper 9:
+//your parameter variables go here!
+var topY = 130 // top of tub
+var wheelX = 155 //wheel center
+var wheelY = 180 //wheel center
+var handlex = 30 //handle center
+//var handleY = 130 //handle center - I added this to (topY)
+var Btubx = 80 // left bottem of tub
+var BtubY = 170  // left bottem of tub
+let wy = -50 //wheelbarrow placment
+let psize = 20 //peddle size
+let yy = 150 //yellow flower
+let xy = 15 //yellow flower
+let xb = 35 //blue flower
+let yb = 20 //blue flowwer
+let xw = 15 //gray flower
+let yw = 70 //gray flower
+let xr = 95 //red flower
+let yr = 100 //red flower
+let e = 0 //edge for wheelbarrow flowers
+let c = psize/2 //peddle cerve
+var leafw = 60 //leaf width
+var leafl = 10  //leaf lenth
+var fully = 50 //lenth of image
+var fullx = 200 //width of image
+var rfp = fully-30 // right flower(and leaf) placement
+let Wheelbarow = false
+let plants = true

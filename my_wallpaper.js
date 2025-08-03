@@ -6,31 +6,31 @@ var handlex = 30 //handle center
 //var handleY = 130 //handle center - I added this to (topY)
 var Btubx = 80 // left bottem of tub
 var BtubY = 170  // left bottem of tub
-let wy = -0 //wheelbarrow placment
-let psize = 10 //peddle size
-let yy = 100 //yellow flower
-let xy = 120 //yellow flower
-let xb = 90 //blue flower
-let yb = 110 //blue flowwer
-let xw = 155 //gray flower
-let yw = 120 //gray flower
-let xr = 65 //red flower
-let yr = 105 //red flower
-let e = 0 //edge
+let wy = -50 //wheelbarrow placment
+let psize = 50 //peddle size
+let yy = 0 //yellow flower
+let xy = 195 //yellow flower
+let xb = 95 //blue flower
+let yb = 0 //blue flowwer
+let xw = 195 //gray flower
+let yw = 100 //gray flower
+let xr = 95 //red flower
+let yr = 100 //red flower
+let e = 0 //edge for wheelbarrow flowers
 let c = psize/2 //peddle cerve
-var leafw = 10 //leaf width
-var leafl = 30  //leaf lenth
-var fully = 200 //lenth
-var fullx = 200 //width
-var rfp = fully-20 // right flower(and leaf) placement
-let Wheelbarow = true //false
-let plants = true //false
+var leafw = 0 //leaf width
+var leafl = 10  //leaf lenth
+var fully = 200 //lenth of image
+var fullx = 200 //width of image
+var rfp = fully-30 // right flower(and leaf) placement
+let Wheelbarow = false
+let plants = true
 
 function setup_wallpaper(pWallpaper) {
   //pWallpaper.output_mode(DEVELOP_GLYPH);
   pWallpaper.output_mode(GRID_WALLPAPER);
   
-  pWallpaper.resolution(FIT_TO_SCREEN);
+  pWallpaper.resolution(NINE_PORTRAIT);
   pWallpaper.show_guide(true); //set this to false when you're ready to print
 
   //Grid settings
@@ -46,16 +46,16 @@ function wallpaper_background() {
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
 
-  //plants in the wheelbarow
+  //plants in the wheelbarow stems
  line(100,topY,xy,yy)//yellow flower
  line(120,topY,xb,yb) //blue flower
  line(130,topY,xw,yw)//gray flower
  line(80,topY,xr,yr) //red flower
-  strokeWeight()
 
- fill(225,200,0)
- 
+
+  strokeWeight()
  //yellow flower 
+ fill(225,200,0)
  square(xy, yy-psize, psize, c, e, c, e)
  square(xy, yy, psize, e, c, e, c)
  square(xy-psize, yy, psize, c, e, c, e)
@@ -82,22 +82,17 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
  square(xr-psize, yr, psize, c, e, c, e)
  square(xr-psize, yr-psize, psize, e, c, e, c)
  
+ 
+if(Wheelbarow){
+ //leaves on wheelbarrow
  fill(10, 135, 1);
  square(115,122,20,200,0,200,0)
  square(92,122,20,0,200,0,200)
  ellipse(80,138,20,40)
-strokeWeight(1)
-fill(255)
-if(Wheelbarow){
-  // the second wheelbarow
- /*strokeWeight(5);
- line(230,190,348,190);//bottem handle
- line(230,140,348,140);//top handle
- rect(348,160,5,5);//wheel
- strokeWeight(0.75);
- rect(250,140,100,50); //body */
 
- //first wheelbarow
+ strokeWeight(1)
+ fill(255)
+
  //tub
   quad(60, topY+wy, 165, topY+wy, 130, 165+wy, Btubx, BtubY+wy);
   
@@ -110,8 +105,7 @@ if(Wheelbarow){
  //handle from wheel
   line(handlex,topY+wy,wheelX,wheelY+wy);
 
-  strokeWeight(1); //back to normal
-  
+  strokeWeight(1); 
   fill(255);
   // new handle
   ellipse(handlex,topY+wy,17,7);
@@ -120,9 +114,8 @@ if(Wheelbarow){
 
 if(plants){
   strokeWeight();
-  //blue
+  //blue edge flowers
   fill(22, 3, 123);
- //flowers
   circle(20,20,10); //top left
   circle(rfp,20,20); //top right
   circle(rfp,180,10);//bottem right
@@ -130,16 +123,11 @@ if(plants){
 
   //grean leaves
   fill(10, 135, 1);
-
   ellipse(50, 20, leafl, leafw);//top left
   ellipse(20, 50, leafw, leafl);//left top
   ellipse(rfp,50,leafw,leafl);//right top
   ellipse(rfp-30,20,leafl,leafw) //top right
   ellipse(rfp,150,leafw,leafl) //bottem right
-
- //transperent plants
- 
-
 }
 
   
