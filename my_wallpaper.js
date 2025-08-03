@@ -27,8 +27,8 @@ let Wheelbarow = true //false
 let plants = true //false
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(DEVELOP_GLYPH);
-  //pWallpaper.output_mode(GRID_WALLPAPER);
+  //pWallpaper.output_mode(DEVELOP_GLYPH);
+  pWallpaper.output_mode(GRID_WALLPAPER);
   
   pWallpaper.resolution(FIT_TO_SCREEN);
   pWallpaper.show_guide(true); //set this to false when you're ready to print
@@ -69,7 +69,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
  square(xb-psize, yb-psize, psize, e, c, e, c)
 
  //gray flower
- fill(100,100,100)
+ fill(70, 4, 82)
  square(xw, yw-psize, psize, c, e, c, e)
  square(xw, yw, psize, e, c, e, c)
  square(xw-psize, yw, psize, c, e, c, e)
