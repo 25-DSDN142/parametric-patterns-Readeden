@@ -6,7 +6,18 @@ var handlex = 30 //handle center
 //var handleY = 130 //handle center - I added this to (topY)
 var Btubx = 80 // left bottem of tub
 var BtubY = 170  // left bottem of tub
-var size = 5 //inner flower size
+let wy = -0 //wheelbarrow placment
+let psize = 10 //peddle size
+let yy = 100 //yellow flower
+let xy = 120 //yellow flower
+let xb = 90 //blue flower
+let yb = 110 //blue flowwer
+let xw = 155 //gray flower
+let yw = 120 //gray flower
+let xr = 65 //red flower
+let yr = 105 //red flower
+let e = 0 //edge
+let c = psize/2 //peddle cerve
 var leafw = 10 //leaf width
 var leafl = 30  //leaf lenth
 var fully = 200 //lenth
@@ -35,11 +46,51 @@ function wallpaper_background() {
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
 
+  //plants in the wheelbarow
+ line(100,topY,xy,yy)//yellow flower
+ line(120,topY,xb,yb) //blue flower
+ line(130,topY,xw,yw)//gray flower
+ line(80,topY,xr,yr) //red flower
+  strokeWeight()
+  //circle(100,100,5)
+ fill(225,200,100)
+ 
+ //yellow flower 
+ square(xy, yy-psize, psize, c, e, c, e)
+ square(xy, yy, psize, e, c, e, c)
+ square(xy-psize, yy, psize, c, e, c, e)
+ square(xy-psize, yy-psize, psize, e, c, e, c)
 
+ //blue flower
+ fill(0,100,200)
+ square(xb, yb-psize, psize, c, e, c, e)
+ square(xb, yb, psize, e, c, e, c)
+ square(xb-psize, yb, psize, c, e, c, e)
+ square(xb-psize, yb-psize, psize, e, c, e, c)
 
+ //gray flower
+ fill(100,100,100)
+ square(xw, yw-psize, psize, c, e, c, e)
+ square(xw, yw, psize, e, c, e, c)
+ square(xw-psize, yw, psize, c, e, c, e)
+ square(xw-psize, yw-psize, psize, e, c, e, c)
+
+ //red flower
+ fill(255,0,100)
+ square(xr, yr-psize, psize, c, e, c, e)
+ square(xr, yr, psize, e, c, e, c)
+ square(xr-psize, yr, psize, c, e, c, e)
+ square(xr-psize, yr-psize, psize, e, c, e, c)
+ 
+ fill(10, 135, 1);
+ square(115,122,20,200,0,200,0)
+ square(92,122,20,0,200,0,200)
+ ellipse(80,138,20,40)
+strokeWeight(1)
+fill(255)
 if(Wheelbarow){
   // the second wheelbarow
- /* strokeWeight(5);
+ /*strokeWeight(5);
  line(230,190,348,190);//bottem handle
  line(230,140,348,140);//top handle
  rect(348,160,5,5);//wheel
@@ -48,39 +99,36 @@ if(Wheelbarow){
 
  //first wheelbarow
  //tub
-  quad(60, topY, 165, topY, 130, 165, Btubx, BtubY);
+  quad(60, topY+wy, 165, topY+wy, 130, 165+wy, Btubx, BtubY+wy);
   
   //wheel
- ellipse(wheelX,wheelY,25);
+ ellipse(wheelX,wheelY+wy,25);
 
  strokeWeight(2);
   //stand
-  line( Btubx, BtubY, 67, 190);
+  line( Btubx, BtubY+wy, 67, 190+wy);
  //handle from wheel
-  line(handlex,topY,wheelX,wheelY);
+  line(handlex,topY+wy,wheelX,wheelY+wy);
 
   strokeWeight(1); //back to normal
   
   fill(255);
-  //noStrock()
   // new handle
-  ellipse(handlex,topY,17,7);
+  ellipse(handlex,topY+wy,17,7);
 
 }
 
 if(plants){
   strokeWeight();
-  //blue flowers
+  //blue
   fill(22, 3, 123);
-  //big flower
- //circle(200,50,size)
- //small flowers
+ //flowers
   circle(20,20,10); //top left
   circle(rfp,20,20); //top right
   circle(rfp,180,10);//bottem right
   circle(20,180,30);//botem left
 
-  //leaves
+  //grean leaves
   fill(10, 135, 1);
 
   ellipse(50, 20, leafl, leafw);//top left
