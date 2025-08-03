@@ -52,8 +52,8 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
  line(130,topY,xw,yw)//gray flower
  line(80,topY,xr,yr) //red flower
   strokeWeight()
-  //circle(100,100,5)
- fill(225,200,100)
+
+ fill(225,200,0)
  
  //yellow flower 
  square(xy, yy-psize, psize, c, e, c, e)
